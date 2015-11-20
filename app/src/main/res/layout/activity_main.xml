@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button"
+        android:layout_marginBottom="16dp"
+        android:scaleType="centerInside"
+        android:layout_marginTop="16dp"/>
+
+        <!-- TODO: justify here the selected scaleType:
+
+            scaleType has been set to centerInside to show the full image centered on the view and preserving the
+            original aspect ratio of the image. If the image has less resolution than the available space it will show
+            the image on it's original size. If the image is bigger than the available space it will scale down it to the
+            available space.
+
+            There was a second choice available: to use option fitCenter. It has the same consequences that using
+            centerInside, but if the image is smaller than the available space it will scale up the image to fill
+            the available space.
+
+            In this case I preferred to preserve the original size of the image if it's smaller than the available
+            space, so the selected option was centerInside.
+
+            Other options would crop the image, change the aspect ratio or put the image no centered on the view,
+            so they have been discarded.
+
+        -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="@string/text_no_image"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/button_open_new_image"/>
+
+</RelativeLayout>
